@@ -1,7 +1,12 @@
-module.exports = class Item {
-  constructor(name, price, onSale) {
-    this.name = name
-    this.price = price
-    this.onSale = onSale
-  }
+var saleList = [];
+
+exports.addSaleItem = (obj) => {
+    saleList.push(obj)
+}
+
+exports.getSaleItem = () =>{
+    return saleList
+}
+exports.emptysaleList = () =>{
+    saleList = []
 }

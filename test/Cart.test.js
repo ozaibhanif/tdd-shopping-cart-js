@@ -1,11 +1,12 @@
-const Cart = require('../src/Cart.js');
-const expect = require('chai').expect;
+let { Cart, addItemInCart, totalPrice, quantityUpdate, emptyCart, removeItem } = require('./src/Cart');
+const { addSaleItem, emptysaleList } = require('./src/Item');
 
-describe('Cart', () => {
-    it('should initialize as empty', () => {
-        const cart = new Cart()
-
-        expect(cart.items).to.deep.equal([])
-        expect(cart.totalPrice).to.be.equal(0)
-    })
+//1.Given that I visit the site, when I begin shopping, then I expect my cart to be empty.
+test('Cart should be empty', () => {
+    // Arrange
+    const assert = [];
+    // Act
+    const result = Cart();
+    // Assert
+    expect(result).toEqual(assert)
 })
